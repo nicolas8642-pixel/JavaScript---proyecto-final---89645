@@ -1,0 +1,42 @@
+.navbar-bootstrap {
+    display: flex;
+    background-color: #5c7e8f;
+    font-family: EB garmond;
+    font-size: x-large;
+}
+.hover-navbar:hover {
+    text-shadow: 2px 2px #a2a2a2;
+}
+
+#winter-ecommerce {
+    font-size: xxx-large;
+    padding: 40px;
+    
+}
+#winter-ecommerce:hover {
+    text-shadow: 2px 2px  #a2a2a2;
+}
+
+.button-search {
+    background-color: transparent;   
+    color: #d4dde2;
+    border: 1px solid #d4dde2;
+}
+
+.button-search:hover {
+    background-color: #d4dde2;       
+    color: black;                    
+    border: 1px solid #d4dde2;
+}
+
+
+.button-search {
+    transition: all 0.3s ease;
+}
+
+
+#productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}

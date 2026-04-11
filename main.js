@@ -49,3 +49,4 @@ const tablasSnowboard = [
 }    
 ]
 
+console.log(tablasSnowboard);
