@@ -40,3 +40,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+
+.card-img-top {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
