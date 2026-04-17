@@ -2,7 +2,7 @@ const tablasSnowboard = [
     {
     marca: 'Jones',
     modelo: 'Stratos',
-    altura: 158 ,
+    medida: 158 ,
     especialidad: 'Freeride',
     shape: 'Direccional',
     perfil: 'camber',
@@ -11,7 +11,7 @@ const tablasSnowboard = [
     {
     marca: 'Burton',
     modelo: 'Custom',
-    altura: 155,
+    medida: 155,
     especialidad: 'All-mountain',
     shape: 'Direccional',
     perfil: 'camber',
@@ -20,7 +20,7 @@ const tablasSnowboard = [
     {
     marca: 'Burton',
     modelo: 'Custom X',
-    altura: 158,
+    medida: 158,
     especialidad: 'Pista',
     shape: 'Direccional',
     perfil: 'Camber',
@@ -29,7 +29,7 @@ const tablasSnowboard = [
     {
     marca: 'Burton',
     modelo: 'Instigator',
-    altura: 150,
+    medida: 150,
     especialidad: 'Pista / Snowpark',
     shape: 'Twin-tip',
     perfil: 'Flat-Top',
@@ -38,16 +38,16 @@ const tablasSnowboard = [
     {
     marca: 'Nitro',
     modelo: 'Team',
-    altura: 149,
+    medida: 149,
     especialidad: 'Snowpark',
     shape:'Twin-tip',
-    perfil: 'Flying V',
+    perfil: 'Flying-V',
     id: 5
 },
     {
     marca: 'Vio Snowboards',
     modelo: 'The Pineral',
-    altura: 145,
+    medida: 145,
     especialidad: 'All-mountain',
     shape: 'Twin-tip',
     perfil: 'Camber',
@@ -65,7 +65,7 @@ const tablasSnowboard = [
 ,{
     marca: 'Capita', 
     modelo: 'Dark Horse', 
-    altura: 156,
+    medida: 156,
     especialidad: 'Snowpark',
     shape: 'Direccional',
     perfil: 'Camber',
@@ -74,7 +74,7 @@ const tablasSnowboard = [
 ,{
     marca: 'K2', 
     modelo: 'Hypnotist', 
-    altura: 160,
+    medida: 160,
     especialidad: 'All-mountain',
     shape: 'Twin-direccional',
     perfil: 'Camber',
@@ -84,3 +84,5 @@ const tablasSnowboard = [
 ]
 
 console.log(tablasSnowboard);
+
+

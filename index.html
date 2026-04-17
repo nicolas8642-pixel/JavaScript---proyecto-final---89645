@@ -28,25 +28,102 @@
 
 
 
-        <li class="nav-item dropdown" data-bs-theme="#d4dde2">
-          <a class="nav-link dropdown-toggle hover-navbar" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Filtros
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">item 1</a></li>
-            <li><a class="dropdown-item" href="#">item 2</a></li>
-            <li><a class="dropdown-item" href="#">item 3</a></li>
-            <li><a class="dropdown-item" href="#">item 4</a></li>
-            <li><a class="dropdown-item" href="#">item 5</a></li>
-            <li><a class="dropdown-item" href="#">item 6</a></li>
 
-          </ul>
-        </li>
+<!-- Menu Dropdown 'Filtros'-->
 
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle hover-navbar" href="#" data-bs-toggle="dropdown">
+    Filtros
+  </a>
+
+  <ul class="dropdown-menu">
+
+    <!-- Submenu 'Tipo' -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item dropdown-toggle " href="#">
+        Tipo
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Freeride</a></li>
+        <li><a class="dropdown-item" href="#">All-mountain</a></li>
+        <li><a class="dropdown-item" href="#">Snowpark</a></li>
+        <li><a class="dropdown-item" href="#">Pista</a></li>
+
+      </ul>
+    </li>
+
+    <!-- Submenu 'Perfil' -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item dropdown-toggle" href="#">
+        Perfil
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Camber</a></li>
+        <li><a class="dropdown-item" href="#">Flat</a></li>
+        <li><a class="dropdown-item" href="#">Flying-V</a></li>
+
+      </ul>
+    </li>
+
+
+    <!-- Submenu 'Medida' -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item dropdown-toggle" href="#">
+        Medida
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"> >156cm </a></li>
+        <li><a class="dropdown-item" href="#"> <=156 </a></li>
+      </ul>
+    </li>
+
+
+    <!-- Submenu 'Shape' -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item dropdown-toggle" href="#">
+        Shape
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"> Twin-tip </a></li>
+        <li><a class="dropdown-item" href="#"> Direccional </a></li>
+        <li><a class="dropdown-item" href="#"> Twin-direccional </a></li>
+
+      </ul>
+    </li>
+    <!-- Submenu 'Marca' -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item dropdown-toggle" href="#">
+        Marca
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"> Burton </a></li>
+        <li><a class="dropdown-item" href="#"> Jones </a></li>
+        <li><a class="dropdown-item" href="#"> Vio Snowboards </a></li>
+        <li><a class="dropdown-item" href="#"> Nitro </a></li>
+        <li><a class="dropdown-item" href="#"> Capita </a></li>
+        <li><a class="dropdown-item" href="#"> k2 </a></li>
 
 
 
       </ul>
+    </li>
+
+  </ul>
+</li>
+
+  </ul>
+</li>
+
+
+  
+
+
+
+  </ul>
+</li>
+      </ul>
+
+
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success button-search" type="submit">Search</button>
@@ -64,13 +141,16 @@
         
 
     <!-- Producto 1 -->
-    <div id="producto1" class="mb-4">
+    <div id="producto1" class="mb-4 z">
       <div class="card h-100">
         <img src="Imagenes/Jones - Stratos.webp"   class="card-img-top" alt="jones - stratos ">
         <div class="card-body">
           <h5 class="card-title">Jones - Stratos</h5>
           <p class="card-text">$500</p>
-          <button class="btn btn-primary w-100">Comprar</button>
+          <div class="d-flex w-100">
+          <button class="btn btn-outline-primary w-50">Comprar</button>
+          <button class="btn btn-primary w-50">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
@@ -82,7 +162,10 @@
         <div class="card-body">
           <h5 class="card-title">Burton - Custom</h5>
           <p class="card-text">$750</p>
-          <button class="btn btn-primary w-100">Comprar</button>
+          <div class="d-flex w-100">
+          <button class="btn btn-outline-primary w-50">Comprar</button>
+          <button class="btn btn-primary w-50">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
@@ -94,7 +177,10 @@
         <div class="card-body">
           <h5 class="card-title">Burton - Custom X</h5>
           <p class="card-text">$800</p>
-          <button class="btn btn-primary w-100">Comprar</button>
+          <div class="d-flex w-100">
+          <button class="btn btn-outline-primary w-50">Comprar</button>
+          <button class="btn btn-primary w-50">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
@@ -110,7 +196,10 @@
         <div class="card-body">
           <h5 class="card-title">Burton - Instigator</h5>
           <p class="card-text">$450</p>
-          <button class="btn btn-primary w-100">Comprar</button>
+          <div class="d-flex w-100">
+          <button class="btn btn-outline-primary w-50">Comprar</button>
+          <button class="btn btn-primary w-50">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
@@ -122,7 +211,10 @@
         <div class="card-body">
           <h5 class="card-title">Nitro - Team</h5>
           <p class="card-text">$450</p>
-          <button class="btn btn-primary w-100">Comprar</button>
+          <div class="d-flex w-100">
+          <button class="btn btn-outline-primary w-50">Comprar</button>
+          <button class="btn btn-primary w-50">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
@@ -134,7 +226,10 @@
         <div class="card-body">
           <h5 class="card-title">Vio Snowboards - The Pineral</h5>
           <p class="card-text">$250</p>
-          <button class="btn btn-primary w-100">Comprar</button>
+          <div class="d-flex w-100">
+          <button class="btn btn-outline-primary w-50">Comprar</button>
+          <button class="btn btn-primary w-50">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
@@ -148,7 +243,10 @@
         <div class="card-body">
           <h5 class="card-title">Nitro - Ripper</h5>
           <p class="card-text">$240</p>
-          <button class="btn btn-primary w-100">Comprar</button>
+          <div class="d-flex w-100">
+          <button class="btn btn-outline-primary w-50">Comprar</button>
+          <button class="btn btn-primary w-50">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
@@ -160,7 +258,10 @@
         <div class="card-body">
           <h5 class="card-title">Capita - Dark Horse</h5>
           <p class="card-text">$650</p>
-          <button class="btn btn-primary w-100">Comprar</button>
+          <div class="d-flex w-100">
+          <button class="btn btn-outline-primary w-50">Comprar</button>
+          <button class="btn btn-primary w-50">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
@@ -172,7 +273,10 @@
         <div class="card-body">
           <h5 class="card-title">k2 - Hypnotist</h5>
           <p class="card-text">$700</p>
-          <button class="btn btn-primary w-100">Comprar</button>
+          <div class="d-flex w-100">
+          <button class="btn btn-outline-primary w-50">Comprar</button>
+          <button class="btn btn-primary w-50">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
