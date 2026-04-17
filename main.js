@@ -1,4 +1,4 @@
-const tablasSnowboard = [
+ export const tablasSnowboard = [
     {
     marca: 'Jones',
     modelo: 'Stratos',
@@ -53,10 +53,10 @@ const tablasSnowboard = [
     perfil: 'Camber',
     id: 6
 },
-,{
+{
     marca: 'Nitro', 
     modelo: 'Ripper', 
-    altura: 145,
+    medida: 145,
     especialidad: 'All-mountain',
     shape: 'Twin-tip',
     perfil: 'Camber',
@@ -82,7 +82,3 @@ const tablasSnowboard = [
 }
 
 ]
-
-console.log(tablasSnowboard);
-
-
