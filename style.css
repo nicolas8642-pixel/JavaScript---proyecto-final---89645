@@ -80,3 +80,8 @@
     border-bottom-right-radius: 0.375rem;
 }
 
+.subtitulo-carrito {
+    font-size: x-large;
+    color: #d4dde2;
+    padding: 10px;
+}

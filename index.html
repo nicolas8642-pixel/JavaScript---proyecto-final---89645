@@ -4,301 +4,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>E-commerce de invierno</title>
 </head>
 <body>
     <header>
-        <div >
-            <nav id="navbar-bootstrap" class="navbar navbar-expand-lg navbar-bootstrap ">
-<div class="container-fluid">
-    <a class="navbar-brand navbar-bootstrap" id="winter-ecommerce" href="#">Winter E-commerce</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active navbar-bootstrap hover-navbar" aria-current="page" href="#">Home</a>
-        </li>
+        <div>
+            <nav id="navbar-bootstrap" class="navbar navbar-expand-lg navbar-bootstrap">
+                <div class="container-fluid">
+                    <a class="navbar-brand navbar-bootstrap" id="winter-ecommerce" href="index.html">Winter E-commerce</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <!-- Menu Dropdown 'Filtros' -->
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle hover-navbar" href="#" data-bs-toggle="dropdown">
+                                    Filtros
+                                </a>
+    
+                                <ul class="dropdown-menu">
+    
+                                    <!-- Submenu 'Tipo' -->
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Tipo</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-filtro="tipo" data-valor="freeride">Freeride</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="tipo" data-valor="all-mountain">All-mountain</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="tipo" data-valor="snowpark">Snowpark</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="tipo" data-valor="pista">Pista</a></li>
+                                        </ul>
+                                    </li>
+    
+                                    <!-- Submenu 'Perfil' -->
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Perfil</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-filtro="perfil" data-valor="camber">Camber</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="perfil" data-valor="flat">Flat</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="perfil" data-valor="flying-v">Flying-V</a></li>
+                                        </ul>
+                                    </li>
+    
+                                    <!-- Submenu 'Medida' -->
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Medida</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-filtro="medida" data-valor="mayor">&gt;156cm</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="medida" data-valor="menor">&lt;=156cm</a></li>
+                                        </ul>
+                                    </li>
+    
+                                    <!-- Submenu 'Shape' -->
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Shape</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-filtro="shape" data-valor="twin-tip">Twin-tip</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="shape" data-valor="direccional">Direccional</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="shape" data-valor="twin-direccional">Twin-direccional</a></li>
+                                        </ul>
+                                    </li>
+    
+                                    <!-- Submenu 'Marca' -->
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Marca</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-filtro="marca" data-valor="burton">Burton</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="marca" data-valor="jones">Jones</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="marca" data-valor="vio snowboards">Vio Snowboards</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="marca" data-valor="nitro">Nitro</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="marca" data-valor="capita">Capita</a></li>
+                                            <li><a class="dropdown-item" href="#" data-filtro="marca" data-valor="k2">K2</a></li>
+                                        </ul>
+                                    </li>
+    
+                                    <li><hr class="dropdown-divider"></li>
+                                    <!-- Botón limpiar filtros -->
+                                    <li>
+                                        <a class="dropdown-item text-danger" href="#" id="btn-limpiar-filtros">
+                                            ✕ Limpiar filtros
+                                        </a>
+                                    </li>
+    
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active navbar-bootstrap hover-navbar" aria-current="page" href="carrito.html">Carrito</a>
+                            </li>
 
 
+                        </ul>
 
-
-
-<!-- Menu Dropdown 'Filtros'-->
-
-        <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle hover-navbar" href="#" data-bs-toggle="dropdown">
-    Filtros
-  </a>
-
-  <ul class="dropdown-menu">
-
-    <!-- Submenu 'Tipo' -->
-    <li class="dropdown-submenu">
-      <a class="dropdown-item dropdown-toggle " href="#">
-        Tipo
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Freeride</a></li>
-        <li><a class="dropdown-item" href="#">All-mountain</a></li>
-        <li><a class="dropdown-item" href="#">Snowpark</a></li>
-        <li><a class="dropdown-item" href="#">Pista</a></li>
-
-      </ul>
-    </li>
-
-    <!-- Submenu 'Perfil' -->
-    <li class="dropdown-submenu">
-      <a class="dropdown-item dropdown-toggle" href="#">
-        Perfil
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Camber</a></li>
-        <li><a class="dropdown-item" href="#">Flat</a></li>
-        <li><a class="dropdown-item" href="#">Flying-V</a></li>
-
-      </ul>
-    </li>
-
-
-    <!-- Submenu 'Medida' -->
-    <li class="dropdown-submenu">
-      <a class="dropdown-item dropdown-toggle" href="#">
-        Medida
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#"> >156cm </a></li>
-        <li><a class="dropdown-item" href="#"> <=156 </a></li>
-      </ul>
-    </li>
-
-
-    <!-- Submenu 'Shape' -->
-    <li class="dropdown-submenu">
-      <a class="dropdown-item dropdown-toggle" href="#">
-        Shape
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#"> Twin-tip </a></li>
-        <li><a class="dropdown-item" href="#"> Direccional </a></li>
-        <li><a class="dropdown-item" href="#"> Twin-direccional </a></li>
-
-      </ul>
-    </li>
-    <!-- Submenu 'Marca' -->
-    <li class="dropdown-submenu">
-      <a class="dropdown-item dropdown-toggle" href="#">
-        Marca
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#"> Burton </a></li>
-        <li><a class="dropdown-item" href="#"> Jones </a></li>
-        <li><a class="dropdown-item" href="#"> Vio Snowboards </a></li>
-        <li><a class="dropdown-item" href="#"> Nitro </a></li>
-        <li><a class="dropdown-item" href="#"> Capita </a></li>
-        <li><a class="dropdown-item" href="#"> k2 </a></li>
-
-
-
-      </ul>
-    </li>
-
-  </ul>
-</li>
-
-  </ul>
-</li>
-
-
-  
-
-
-
-  </ul>
-</li>
-      </ul>
-
-
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success button-search" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <button class="btn btn-outline-success button-search" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
+
     <main>
-        
-    <div class="container mt-5"></div>
-        <div id="productos">
+        <div class="container mt-5">
 
-        
+            <!-- Filtros activos -->
+            <div id="filtros-activos" class="mb-3"></div>
 
-    <!-- Producto 1 -->
-    <div id="producto1" class="mb-4 z">
-      <div class="card h-100">
-        <img src="Imagenes/Jones - Stratos.webp"   class="card-img-top" alt="jones - stratos ">
-        <div class="card-body">
-          <h5 class="card-title">Jones - Stratos</h5>
-          <p class="card-text">$500</p>
-          <div class="d-flex w-100">
-          <button class="btn btn-outline-primary w-50">Comprar</button>
-          <button class="btn btn-primary w-50">Agregar al carrito</button>
-          </div>
+            <div id="productos">
+
+                <!-- Producto 1 -->
+                <div id="producto1" class="mb-4">
+                    <div class="card h-100">
+                        <img src="Imagenes/Jones - Stratos.webp" class="card-img-top" alt="jones - stratos">
+                        <div class="card-body">
+                            <h5 class="card-title">Jones - Stratos</h5>
+                            <p class="card-text">$500</p>
+                            <div class="d-flex w-100">
+                                <button class="btn btn-outline-primary w-50">Comprar</button>
+                                <button class="btn btn-primary w-50">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div id="producto2" class="mb-4">
+                    <div class="card h-100">
+                        <img src="Imagenes/burton - custom.webp" class="card-img-top" alt="burton - custom">
+                        <div class="card-body">
+                            <h5 class="card-title">Burton - Custom</h5>
+                            <p class="card-text">$750</p>
+                            <div class="d-flex w-100">
+                                <button class="btn btn-outline-primary w-50">Comprar</button>
+                                <button class="btn btn-primary w-50">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div id="producto3" class="mb-4">
+                    <div class="card h-100">
+                        <img src="Imagenes/burton - custom x.webp" class="card-img-top" alt="burton - custom x">
+                        <div class="card-body">
+                            <h5 class="card-title">Burton - Custom X</h5>
+                            <p class="card-text">$800</p>
+                            <div class="d-flex w-100">
+                                <button class="btn btn-outline-primary w-50">Comprar</button>
+                                <button class="btn btn-primary w-50">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div id="producto4" class="mb-4">
+                    <div class="card h-100">
+                        <img src="Imagenes/burton-instigator.webp" class="card-img-top" alt="burton - Instigator">
+                        <div class="card-body">
+                            <h5 class="card-title">Burton - Instigator</h5>
+                            <p class="card-text">$450</p>
+                            <div class="d-flex w-100">
+                                <button class="btn btn-outline-primary w-50">Comprar</button>
+                                <button class="btn btn-primary w-50">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div id="producto5" class="mb-4">
+                    <div class="card h-100">
+                        <img src="Imagenes/nitro - team.jpg" class="card-img-top" alt="nitro - team">
+                        <div class="card-body">
+                            <h5 class="card-title">Nitro - Team</h5>
+                            <p class="card-text">$450</p>
+                            <div class="d-flex w-100">
+                                <button class="btn btn-outline-primary w-50">Comprar</button>
+                                <button class="btn btn-primary w-50">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div id="producto6" class="mb-4">
+                    <div class="card h-100">
+                        <img src="Imagenes/vio snowboards -  the pineral.png" class="card-img-top" alt="Vio Snowboards - The Pineral">
+                        <div class="card-body">
+                            <h5 class="card-title">Vio Snowboards - The Pineral</h5>
+                            <p class="card-text">$250</p>
+                            <div class="d-flex w-100">
+                                <button class="btn btn-outline-primary w-50">Comprar</button>
+                                <button class="btn btn-primary w-50">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 7 -->
+                <div id="producto7" class="mb-4">
+                    <div class="card h-100">
+                        <img src="Imagenes/nitro - ripper.png" class="card-img-top" alt="nitro - ripper">
+                        <div class="card-body">
+                            <h5 class="card-title">Nitro - Ripper</h5>
+                            <p class="card-text">$240</p>
+                            <div class="d-flex w-100">
+                                <button class="btn btn-outline-primary w-50">Comprar</button>
+                                <button class="btn btn-primary w-50">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 8 -->
+                <div id="producto8" class="mb-4">
+                    <div class="card h-100">
+                        <img src="Imagenes/capita - dark horse.webp" class="card-img-top" alt="capita - dark horse">
+                        <div class="card-body">
+                            <h5 class="card-title">Capita - Dark Horse</h5>
+                            <p class="card-text">$650</p>
+                            <div class="d-flex w-100">
+                                <button class="btn btn-outline-primary w-50">Comprar</button>
+                                <button class="btn btn-primary w-50">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 9 -->
+                <div id="producto9" class="mb-4">
+                    <div class="card h-100">
+                        <img src="Imagenes/k2 - hypnotist.jpg" class="card-img-top" alt="k2 - Hypnotist">
+                        <div class="card-body">
+                            <h5 class="card-title">k2 - Hypnotist</h5>
+                            <p class="card-text">$700</p>
+                            <div class="d-flex w-100">
+                                <button class="btn btn-outline-primary w-50">Comprar</button>
+                                <button class="btn btn-primary w-50">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Producto 2 -->
-    <div id="producto2" class=" mb-4">
-      <div class="card h-100">
-        <img src="Imagenes/burton - custom.webp" class="card-img-top" alt="burton - custom">
-        <div class="card-body">
-          <h5 class="card-title">Burton - Custom</h5>
-          <p class="card-text">$750</p>
-          <div class="d-flex w-100">
-          <button class="btn btn-outline-primary w-50">Comprar</button>
-          <button class="btn btn-primary w-50">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Producto 3 -->
-    <div id="producto3" class="mb-4">
-      <div class="card h-100">
-        <img src="Imagenes/burton - custom x.webp" class="card-img-top" alt="burton - custom x">
-        <div class="card-body">
-          <h5 class="card-title">Burton - Custom X</h5>
-          <p class="card-text">$800</p>
-          <div class="d-flex w-100">
-          <button class="btn btn-outline-primary w-50">Comprar</button>
-          <button class="btn btn-primary w-50">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  
-
-  
-
-    <!-- Producto 4 -->
-    <div id="producto4" class=" mb-4">
-      <div class="card h-100">
-        <img src="Imagenes/burton-instigator.webp" class="card-img-top" alt="burton - Instigator">
-        <div class="card-body">
-          <h5 class="card-title">Burton - Instigator</h5>
-          <p class="card-text">$450</p>
-          <div class="d-flex w-100">
-          <button class="btn btn-outline-primary w-50">Comprar</button>
-          <button class="btn btn-primary w-50">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Producto 5 -->
-    <div id="producto5" class="mb-4">
-      <div class="card h-100">
-        <img src="Imagenes/nitro - team.jpg" class="card-img-top" alt="nitro - team">
-        <div class="card-body">
-          <h5 class="card-title">Nitro - Team</h5>
-          <p class="card-text">$450</p>
-          <div class="d-flex w-100">
-          <button class="btn btn-outline-primary w-50">Comprar</button>
-          <button class="btn btn-primary w-50">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Producto 6 -->
-    <div id="producto6" class="mb-4">
-      <div class="card h-100">
-        <img src="Imagenes/vio snowboards -  the pineral.png" class="card-img-top" alt="Vio Snowboards - The Pineral">
-        <div class="card-body">
-          <h5 class="card-title">Vio Snowboards - The Pineral</h5>
-          <p class="card-text">$250</p>
-          <div class="d-flex w-100">
-          <button class="btn btn-outline-primary w-50">Comprar</button>
-          <button class="btn btn-primary w-50">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  
-  
-  <!-- Producto 7 -->
-    <div id="producto7" class="mb-4">
-      <div class="card h-100">
-        <img src="Imagenes/nitro - ripper.png" class="card-img-top" alt="nitro - ripper">
-        <div class="card-body">
-          <h5 class="card-title">Nitro - Ripper</h5>
-          <p class="card-text">$240</p>
-          <div class="d-flex w-100">
-          <button class="btn btn-outline-primary w-50">Comprar</button>
-          <button class="btn btn-primary w-50">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Producto 8 -->
-    <div id="producto8" class=" mb-4">
-      <div class="card h-100">
-        <img src="Imagenes/capita - dark horse.webp" class="card-img-top" alt="capita - dark horse">
-        <div class="card-body">
-          <h5 class="card-title">Capita - Dark Horse</h5>
-          <p class="card-text">$650</p>
-          <div class="d-flex w-100">
-          <button class="btn btn-outline-primary w-50">Comprar</button>
-          <button class="btn btn-primary w-50">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Producto 9 -->
-    <div id="producto9" class="mb-4">
-      <div class="card h-100">
-        <img src="Imagenes/k2 - hypnotist.jpg" class="card-img-top" alt="k2 - Hypnotist">
-        <div class="card-body">
-          <h5 class="card-title">k2 - Hypnotist</h5>
-          <p class="card-text">$700</p>
-          <div class="d-flex w-100">
-          <button class="btn btn-outline-primary w-50">Comprar</button>
-          <button class="btn btn-primary w-50">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  
-
-</div>
-</div>
-
-
-</div>
-
-
-
-        
-
-
-
-
     </main>
 
-    <script type="module" src="app.js "></script>
-
+    <script type="module" src="app.js"></script>
 </body>
-</html> 
+</html>
