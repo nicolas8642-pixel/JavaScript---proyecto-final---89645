@@ -1,8 +1,8 @@
-import { tablasSnowboard } from './main.js'
+import { tablasSnowboard, agregarAlCarrito, carrito} from './main.js'
 
 let filtrosActivos = {}
 
-// Escucha clicks en los items de filtro (los que tienen data-filtro)
+
 document.querySelectorAll('.dropdown-item[data-filtro]').forEach(boton => {
     boton.addEventListener('click', (e) => {
         e.preventDefault()
@@ -34,7 +34,7 @@ const aplicarFiltros = () => {
 
         let visible = true
 
-        // Filtro tipo (especialidad) — puede contener "/" como "Pista / Snowpark"
+        // Filtro tipo 
         if (filtrosActivos.tipo) {
             const especialidadLower = tabla.especialidad.toLowerCase()
             if (!especialidadLower.includes(filtrosActivos.tipo)) {
@@ -63,7 +63,7 @@ const aplicarFiltros = () => {
             }
         }
 
-        // Filtro medida — comparación numérica
+        // Filtro medida
         if (filtrosActivos.medida) {
             if (filtrosActivos.medida === 'mayor' && tabla.medida <= 156) {
                 visible = false
@@ -77,7 +77,7 @@ const aplicarFiltros = () => {
     })
 }
 
-// Muestra badges con los filtros activos encima de los productos
+
 const actualizarBadgesFiltros = () => {
     const contenedor = document.getElementById('filtros-activos')
     if (!contenedor) return
@@ -112,3 +112,41 @@ const actualizarBadgesFiltros = () => {
         contenedor.appendChild(badge)
     })
 }
+
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-agregar')) {
+        const id = Number(e.target.dataset.id)
+        agregarAlCarrito(id)
+        actualizarContadorCarrito()
+
+        Toastify({
+            text: 'Agregado al carrito!',
+            duration: 2000,
+            gravity: 'top',
+            position: 'left',
+            close: true,
+            style: {
+                background: 'linear-gradient(to right, #a2a2a2, #d4dde2',
+                color: '#000',
+            }
+        }).showToast(); 
+    }
+})
+
+const actualizarContadorCarrito = () => {
+
+    const contador = document.getElementById('contador-carrito')
+    if (contador) {
+        const total = carrito.reduce((acc, item) => acc + item.cantidad, 0)
+        contador.textContent = total
+    }
+}
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('info-imagen')) {
+        Swal.fire({
+            
+        })
+    }
+})

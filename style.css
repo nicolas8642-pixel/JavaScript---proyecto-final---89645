@@ -85,3 +85,9 @@
     color: #d4dde2;
     padding: 10px;
 }
+
+#carrito svg {
+    position: relative;
+    top: .5rem;
+    left: 1.5rem;
+}
