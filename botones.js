@@ -1,7 +1,12 @@
 import { tablasSnowboard, agregarAlCarrito, carrito} from './main.js'
 
 let filtrosActivos = {}
+let terminoBusqueda = ''  // estado de la búsqueda, independiente de los filtros dropdown
 
+
+// ─────────────────────────────────────────────
+//  FILTROS DROPDOWN
+// ─────────────────────────────────────────────
 
 document.querySelectorAll('.dropdown-item[data-filtro]').forEach(boton => {
     boton.addEventListener('click', (e) => {
@@ -27,6 +32,44 @@ document.getElementById('btn-limpiar-filtros').addEventListener('click', (e) => 
     aplicarFiltros()
 })
 
+
+// ─────────────────────────────────────────────
+//  BÚSQUEDA
+// ─────────────────────────────────────────────
+
+const inputBusqueda = document.querySelector('.navbar input[type="search"]')
+const btnBusqueda   = document.querySelector('.navbar .button-search')
+
+// Tiempo real: filtra mientras el usuario escribe
+inputBusqueda.addEventListener('input', (e) => {
+    terminoBusqueda = e.target.value.trim().toLowerCase()
+    aplicarFiltros()
+})
+
+// Al hacer click en "Search"
+btnBusqueda.addEventListener('click', (e) => {
+    e.preventDefault()
+    terminoBusqueda = inputBusqueda.value.trim().toLowerCase()
+    aplicarFiltros()
+})
+
+// Al presionar Enter dentro del input
+inputBusqueda.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault()
+        terminoBusqueda = inputBusqueda.value.trim().toLowerCase()
+        aplicarFiltros()
+    }
+})
+
+// Si el usuario borra el input, muestra todo de nuevo (respetando filtros activos)
+inputBusqueda.addEventListener('search', () => {
+    terminoBusqueda = ''
+    aplicarFiltros()
+})
+
+
+
 const aplicarFiltros = () => {
     tablasSnowboard.forEach(tabla => {
         const productoHTML = document.getElementById(`producto${tabla.id}`)
@@ -34,48 +77,52 @@ const aplicarFiltros = () => {
 
         let visible = true
 
-        // Filtro tipo 
+        // ── Filtros dropdown ───────────────────────────────────────
+
         if (filtrosActivos.tipo) {
-            const especialidadLower = tabla.especialidad.toLowerCase()
-            if (!especialidadLower.includes(filtrosActivos.tipo)) {
+            if (!tabla.especialidad.toLowerCase().includes(filtrosActivos.tipo)) {
                 visible = false
             }
         }
 
-        // Filtro perfil
         if (filtrosActivos.perfil) {
             if (!tabla.perfil.toLowerCase().includes(filtrosActivos.perfil)) {
                 visible = false
             }
         }
 
-        // Filtro shape
         if (filtrosActivos.shape) {
             if (!tabla.shape.toLowerCase().includes(filtrosActivos.shape)) {
                 visible = false
             }
         }
 
-        // Filtro marca
         if (filtrosActivos.marca) {
             if (!tabla.marca.toLowerCase().includes(filtrosActivos.marca)) {
                 visible = false
             }
         }
 
-        // Filtro medida
         if (filtrosActivos.medida) {
-            if (filtrosActivos.medida === 'mayor' && tabla.medida <= 156) {
-                visible = false
-            }
-            if (filtrosActivos.medida === 'menor' && tabla.medida > 156) {
-                visible = false
-            }
+            if (filtrosActivos.medida === 'mayor' && tabla.medida <= 156) visible = false
+            if (filtrosActivos.medida === 'menor' && tabla.medida  > 156) visible = false
+        }
+
+        // ── Búsqueda por texto 
+
+        if (terminoBusqueda) {
+            const coincide =
+                tabla.marca.toLowerCase().includes(terminoBusqueda)  ||
+                tabla.modelo.toLowerCase().includes(terminoBusqueda) ||
+                String(tabla.precio).includes(terminoBusqueda)
+
+            if (!coincide) visible = false
         }
 
         productoHTML.style.display = visible ? 'block' : 'none'
     })
 }
+
 
 
 const actualizarBadgesFiltros = () => {
@@ -100,7 +147,6 @@ const actualizarBadgesFiltros = () => {
         const valorMostrado = clave === 'medida' ? medidaLabel[valor] : valor
         badge.textContent = `${etiquetas[clave]}: ${valorMostrado}`
 
-        // Click en badge quita ese filtro
         badge.style.cursor = 'pointer'
         badge.title = 'Clic para quitar este filtro'
         badge.addEventListener('click', () => {
@@ -112,6 +158,8 @@ const actualizarBadgesFiltros = () => {
         contenedor.appendChild(badge)
     })
 }
+
+
 
 
 document.addEventListener('click', (e) => {
@@ -130,12 +178,11 @@ document.addEventListener('click', (e) => {
                 background: 'linear-gradient(to right, #a2a2a2, #d4dde2',
                 color: '#000',
             }
-        }).showToast(); 
+        }).showToast()
     }
 })
 
 const actualizarContadorCarrito = () => {
-
     const contador = document.getElementById('contador-carrito')
     if (contador) {
         const total = carrito.reduce((acc, item) => acc + item.cantidad, 0)
@@ -143,10 +190,10 @@ const actualizarContadorCarrito = () => {
     }
 }
 
+
+
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('info-imagen')) {
-        Swal.fire({
-            
-        })
+        Swal.fire({})
     }
 })

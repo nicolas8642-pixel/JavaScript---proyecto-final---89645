@@ -1,9 +1,3 @@
-// ─────────────────────────────────────────────
-//  pexels.js  –  Pexels API helper
-//  • Caché en localStorage (TTL: 7 días)
-//  • Una imagen por producto, query por marca + modelo + "snowboard"
-//  • Fallback a imagen placeholder si la API falla
-// ─────────────────────────────────────────────
 
 const PEXELS_API_KEY = 'nKCy1daQsxxxxF8FyBmV98i5e84pS59hlbiswlsVmFQr4JJxXMnOWjvT' 
 const CACHE_PREFIX   = 'pexels_img_'
@@ -11,9 +5,6 @@ const CACHE_TTL_MS   = 7 * 24 * 60 * 60 * 1000  // 7 días
 const FALLBACK_IMG   = 'https://placehold.co/600x400/5c7e8f/ffffff?text=Snowboard'
 
 /**
- * Devuelve la URL de imagen para un producto.
- * Primero revisa el caché; si no existe o expiró, llama a la API.
- *
  * @param {string} marca
  * @param {string} modelo
  * @returns {Promise<string>} URL de la imagen
